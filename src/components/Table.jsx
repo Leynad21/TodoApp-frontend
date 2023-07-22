@@ -74,7 +74,9 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
-          {isLoading ? <div>Is Loading </div> :
+          {isLoading ? <div>
+            Loading...
+          </div> :
             <> {todos.map((todoItem, index) =>
             (
               <tr key={todoItem.id} className='border-b border-black'>
