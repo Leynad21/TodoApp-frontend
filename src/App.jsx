@@ -21,7 +21,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/todo');
+      const response = await axios.get('https://todoapp-backend-f0eh.onrender.com/api/todo');
       dispatch(setTodo(response.data))
       dispatch(updateLoading(false))
     } catch (error) {

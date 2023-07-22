@@ -21,7 +21,7 @@ const TodoForm = ({ fetchData }) => {
 
     const postTodo = async () => {
         try {
-            await axios.post(`http://127.0.0.1:8000/api/todo/`, newTodo)
+            await axios.post(`https://todoapp-backend-f0eh.onrender.com/api/todo/`, newTodo)
             setNewTodo({ 'body': '' })
             fetchData()
         } catch (error) {

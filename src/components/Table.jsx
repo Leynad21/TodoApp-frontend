@@ -18,7 +18,7 @@ const Table = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/todo/${id}/`)
+      await axios.delete(`https://todoapp-backend-f0eh.onrender.com/api/todo/${id}/`)
       const newList = todos.filter(todo => todo.id !== id)
       dispatch(setTodo(newList))
     } catch (error) {
@@ -28,7 +28,7 @@ const Table = () => {
 
   const handleEdit = async (id, value) => {
     try {
-      const response = await axios.patch(`http://127.0.0.1:8000/api/todo/${id}/`, value)
+      const response = await axios.patch(`https://todoapp-backend-f0eh.onrender.com/api/todo/${id}/`, value)
       console.log(response.data);
       const newTodos = todos.map(todo => todo.id === id ? response.data : todo)
       dispatch(setTodo(newTodos))
